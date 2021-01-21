@@ -4,13 +4,12 @@
   "description": "Create images with news from newsapi.org sources",
   "main": "index.js",
   "scripts": {
-    "start": "npm run test",
-    "test": "ts-node tests/app.ts",
-    "build": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "shx rm -rf build",
+    "start": "npm run build && node app.js --debug --source msnbc --key 12345 --count 9 outdir1",
     "prepare": "npm run build",
     "publish": "echo Published.",
-    "install": "echo Installed.",
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/app.ts",
+    "install": "tsc && echo Installed.",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
@@ -29,7 +28,8 @@
     "@types/node": "^12.12.22",
     "prettier": "^1.19.1",
     "tslint": "^5.20.1",
-    "tslint-config-prettier": "^1.18.0"
+    "tslint-config-prettier": "^1.18.0",
+    "shx": "^0.3.2"
   },
   "repository": {
     "type": "git",

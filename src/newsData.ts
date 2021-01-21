@@ -5,12 +5,11 @@ let axios = require('axios');
 // const sampleNewsJson = require(`../msnbc-top-headlines.json`);
 const sampleNewsJson = require(`C:/Users/ken_faubel/projects/newsImage/msnbc-top-headlines.json`);
 
-module.exports = class NewsData {
+module.exports = class newsdata {
     private logger: any;
 
     constructor(logger: any) {
         this.logger = logger;
-        this.logger.setLevel("verbose");
     }
 
     private fixString(inStr) {

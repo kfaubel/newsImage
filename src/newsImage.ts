@@ -15,16 +15,9 @@ const pure = require('pureimage');
 
 
 module.exports = class newsimage {
-    private googleTopTenData: any;
-    private dayList: any[] = [];
-
-    private logger;
+    private logger: any;
 
     constructor(logger: any) {
-        this.logger = logger;
-    }
-
-    public setLogger(logger: any) {
         this.logger = logger;
     }
 
@@ -59,9 +52,6 @@ module.exports = class newsimage {
 
         ctx.fillStyle = backgroundColor; 
         ctx.fillRect(0,0,imageWidth, imageHeight);
-
-
-        // This works perfectly well! 
 
         try {
             const response:any = await axios.get(dataItem.pictureUrl, {responseType: "stream"} );
@@ -146,5 +136,4 @@ module.exports = class newsimage {
         }
         return list;
     }
-
 }
