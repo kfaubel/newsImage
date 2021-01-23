@@ -69,7 +69,7 @@ module.exports = class newsimage {
         // Draw the title
         const title: string = `${dataItem.title}`
         this.logger.info(`Title: ${title}`);
-        const titleLines: string[] = this.splitLine(title, 45, 2);       
+        const titleLines: string[] = this.splitLine(title, 48, 2);       
 
         let lineNumber: number = 0;
         for (const titleLine of Object.keys(titleLines)) {

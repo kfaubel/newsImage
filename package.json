@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "shx rm -rf build",
-    "start": "npm run build && node app.js --debug --source msnbc --key 12345 --count 9 outdir1",
+    "test":  "npm run build && node app.js --debug --source msnbc --count 10 --key test outdir1",
+    "start": "npm run build && node app.js --debug --source msnbc --count 10 --key <key> outdir1",
     "prepare": "npm run build",
     "publish": "echo Published.",
     "install": "tsc && echo Installed.",

@@ -30,12 +30,11 @@ Options:
 Examples:
   node app.js --debug C:/Users/user1/images/newsImage
 `, {
-  booleanDefault: undefined,
   flags: {
     count: {
       type: 'number',
-      default: 10,
-      alias: 'c',
+      default: 10,       // TODO: figure out why the default is not used
+      alias: 'c'         // TODO: figure out why -c does nto work
     },
     source: {
       type: 'string',
@@ -49,6 +48,7 @@ Examples:
     },
     debug: {
       alias: 'd',
+      default: false
     },
   },
 });
@@ -118,7 +118,7 @@ async function main() {
         logger.level = "info";
     }
 
-    // logger.verbose("CLI: " + JSON.stringify(cli, undefined, 2));    
+    logger.verbose("CLI: " + JSON.stringify(cli, undefined, 2));    
     
     logger.verbose(`Working Directory: ${imageDir}`);
     logger.verbose('====================================');

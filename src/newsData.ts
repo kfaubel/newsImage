@@ -29,10 +29,16 @@ module.exports = class newsdata {
 
         const newsItems:object[] = [];
         
+        let newsJson: any;
+
         try {
-            // const response: any = await axios.get(url, {responseType: "json"} );
-            // const newsJson = response.data;
-            const newsJson = sampleNewsJson; 
+            if (key === "test") {
+                newsJson = sampleNewsJson;
+            } else {
+                const response: any = await axios.get(url, {responseType: "json"} );
+                newsJson = response.data;
+            }
+             
             const articles = newsJson.articles;
 
             for(let i = 0; i < articles.length; i++) {
