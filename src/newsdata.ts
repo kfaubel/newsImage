@@ -5,7 +5,7 @@ let axios = require('axios');
 const sampleNewsJson = require(`../msnbc-top-headlines.json`);
 //const sampleNewsJson = require(`C:/Users/ken_faubel/projects/newsImage/msnbc-top-headlines.json`);
 
-module.exports = class newsdata {
+export class NewsData {
     private logger: any;
 
     constructor(logger: any) {
@@ -53,7 +53,7 @@ module.exports = class newsdata {
                 // this.logger.info(`Article: ${i} ${newsItems[i].title}`);
             }
         } catch (e) {
-            this.logger.error("Read acticle data: " + e);
+            this.logger.error("Read article data: " + e);
         }
 
         return newsItems;

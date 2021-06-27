@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "shx rm -rf build",
-    "test":  "npm run build && node app.js --debug --source msnbc --count 10 --key test outdir1",
+    "test": "npm run build && node app.js --debug --source msnbc --count 10 --key test outdir1",
     "start": "npm run build && node app.js --debug --source msnbc --count 10 --key <key> outdir1",
     "prepare": "npm run build",
     "publish": "echo Published.",
@@ -41,5 +41,9 @@
   "bugs": {
     "url": "https://github.com/kfaubel/newsImage/issues"
   },
-  "homepage": "https://github.com/kfaubel/newsImage#readme"
+  "homepage": "https://github.com/kfaubel/newsImage#readme",
+  "files": [
+    "build/**/*",
+    "fonts/**/*"
+  ]
 }

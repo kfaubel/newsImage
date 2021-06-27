@@ -10,7 +10,7 @@ const pure = require('pureimage');
 // const pureregisterFont = require('pureimage/src/text.js');
 
 
-module.exports = class newsimage {
+export class NewsImage {
     private logger: any;
 
     constructor(logger: any) {

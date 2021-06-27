@@ -53,12 +53,12 @@ Examples:
   },
 });
 
-const NewsData = require('./newsdata');
-const NewsImage = require('./newsimage');
+import { NewsData } from './NewsData';
+import { NewsImage } from './NewsImage';
 
 // Create a new express application instance
 async function update(imageDir: string, source: string, key: string, count: number) {
-    logger.info(`newsImage:update source=${source} count=${count}`);
+    logger.info(`NewsImage:update source=${source} count=${count}`);
 
     const newsData = new NewsData(logger);
     const newsImage = new NewsImage(logger);
@@ -71,8 +71,6 @@ async function update(imageDir: string, source: string, key: string, count: numb
         const item: any = await newsImage.getImage(data[i]);
         imageList[i] = item;
     }
-
-    logger.info("Data gathered.");
 
     try {
         logger.verbose(`Creating directory: ${imageDir}`);
