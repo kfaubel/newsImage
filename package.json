@@ -1,5 +1,5 @@
 {
-  "name": "newsimage",
+  "name": "newsImage",
   "version": "1.0.0",
   "description": "Create images with news from newsapi.org sources",
   "main": "index.js",
