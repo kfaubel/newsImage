@@ -10,7 +10,7 @@
     "start": "npm run build && node app.js --debug --source msnbc --count 10 --key <key> outdir1",
     "prepare": "npm run build",
     "publish": "echo Published.",
-    "install": "tsc && echo Installed.",
+    "install": "echo Installed.",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
